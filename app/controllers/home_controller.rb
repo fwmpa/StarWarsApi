@@ -5,12 +5,16 @@ class HomeController < ApplicationController
   end
 
   def people
+    @people = @swapi_service.people
+    @planets = @swapi_service.planets
   end
 
   def planets
+    @planets = @swapi_service.planets
   end
 
   def starships
+    @starships = @swapi_service.starships
   end
 
   def set_global_swapi_service
