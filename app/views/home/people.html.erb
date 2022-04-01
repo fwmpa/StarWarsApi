@@ -1,2 +1,26 @@
-<h1>Home#people</h1>
-<p>Find me in app/views/home/people.html.erb</p>
+<h1>Characters</h1>
+<table>
+  <thead>
+    <td>Name</td>
+    <td>Height</td>
+    <td>Homeworld</td>
+    <td>Films</td>
+  </thead>
+
+  <tbody>
+    <% @people["results"].each do |person|%>
+      <tr>
+        <td> <%= person["name"] %> </td>
+        <td> <%= person["height"] %> </td>
+        <td> <%= person["homeworld"]%> </td>
+        <td> <%= person["films"] %> </td> 
+      </tr>
+    <% end %>
+    <% @planets["results"].each do |planet|%>
+      <tr>
+        <td> <%= planet["name"] %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
